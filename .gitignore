@@ -1,0 +1,11 @@
+# Arquivos e pastas geradas pelo Quartus
+db/
+incremental_db/
+output_files/
+*.qws
+*.rpt
+*.summary
+*.qmsg
+*.smsg
+*.cmp.rdb
+*.done
