@@ -1,0 +1,30 @@
+# Quartus build artifacts
+db/
+incremental_db/
+output_files/
+simulation/
+tmp/
+
+# Quartus project lock and workspace files
+*.qws
+*.rpt
+*.summary
+*.qmsg
+*.smsg
+*.cmp.rdb
+*.done
+*.bak
+*.log
+
+# ModelSim/Questa generated files
+work/
+transcript
+vsim.wlf
+*.mti
+*.dat
+*.vstf
+
+# OS / editor cache
+.DS_Store
+Thumbs.db
+*.swp
