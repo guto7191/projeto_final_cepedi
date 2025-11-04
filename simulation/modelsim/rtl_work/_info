@@ -1,0 +1,33 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 d/home/aug/Documents/projeto_final_cepedi/simulation/modelsim
+vBancoRegistrador
+!s110 1762191962
+!i10b 1
+!s100 1jF9cZY[FIAPe_dbnUMYz0
+IoIL@1J]7YODDUODJg8fTY1
+VDg1SIo80bB@j0V0VzS_@n1
+R0
+w1762123555
+8/home/aug/Documents/projeto_final_cepedi/BancoRegistrador.v
+F/home/aug/Documents/projeto_final_cepedi/BancoRegistrador.v
+L0 1
+OV;L;10.5b;63
+r1
+!s85 0
+31
+!s108 1762191961.000000
+!s107 /home/aug/Documents/projeto_final_cepedi/BancoRegistrador.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+/home/aug/Documents/projeto_final_cepedi|/home/aug/Documents/projeto_final_cepedi/BancoRegistrador.v|
+!i113 1
+o-vlog01compat -work work
+!s92 -vlog01compat -work work +incdir+/home/aug/Documents/projeto_final_cepedi
+tCvgOpt 0
+n@banco@registrador
