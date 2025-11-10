@@ -10,7 +10,7 @@ module BancoRegistrador(
 	output [7:0] rdData2
 ); 
 
-reg [7:0] regFile[0:3]; // 8 X 8
+reg [7:0] regFile[0:3]; //  4 registradores de 8 bits
 integer k;
 
 assign rdData1 = regFile[sr1];

@@ -5,7 +5,7 @@ module SomadorPC(
 
 always @(PC_endereco) begin
 
-    next_endereco = PC_endereco + 8'b0000_1111; //incrementar 4 bits para proximo endereço 
+    next_endereco = PC_endereco + 8'b0000_0001; //incrementar 4 bits para proximo endereço 
 
 end 
 
