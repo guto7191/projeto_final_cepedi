@@ -13,6 +13,7 @@ module BancoRegistrador(
 reg [7:0] regFile [0:1]; //  2 registradores de 8 bits
 integer k;
 
+//Saida dos dados 
 assign rdData1 = regFile[sr1];
 assign rdData2 = regFile[sr2];
 
@@ -23,7 +24,7 @@ always @(posedge clk) begin
 		end
 	end else begin
 		if(write) 
-			regFile[dr] <= wrData;
+			regFile[dr] <= wrData; //escrita dos dados 
 	end
 end
 
