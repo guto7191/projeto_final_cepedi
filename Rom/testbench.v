@@ -19,6 +19,7 @@ initial begin
 
     #1 reset = 1'b1;
     #1 ler_endereco = 8'b0000_0000;
+    #1 reset = 1'b0;
 
     for(k=0; k < 32; k=k+1)begin
         #1 ler_endereco = ler_endereco + 8'b0000_0001; 

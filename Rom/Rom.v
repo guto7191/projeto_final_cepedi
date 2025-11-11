@@ -6,9 +6,9 @@ module Rom (
 
 integer k;
 
-reg [7:0] memoria [0:31]; // 32 registradores de 8 bits
+reg [7:0] memoria [0:32]; // 32 registradores de 8 bits
 
-assign trucao_out = memoria[ler_endereco];
+assign instrucao_out = memoria[ler_endereco];
 
 always @(*)begin
     if(reset)begin
@@ -17,10 +17,9 @@ always @(*)begin
         end
     end else begin 
        // Inicilaizar manualmente a memória 
-        memoria[0] = 8'b0000_0001;
-        memoria[1] = 8'b0000_0010; 
-        memoria[2] = 8'b0000_0011;
-        memoria[3] = 8'b0000_0100;
+        for(k=0; k < 32; k= k + 1)begin
+            memoria[k] = k;
+        end
     end
 end
 
