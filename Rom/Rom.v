@@ -6,7 +6,7 @@ module Rom (
 
 integer k;
 
-reg [7:0] memoria [31:0]; // 32 registradores de 8 bits
+reg [7:0] memoria [0:31]; // 32 registradores de 8 bits
 
 assign trucao_out = memoria[ler_endereco];
 
