@@ -25,6 +25,16 @@ localparam JMP = 4'b0111; // Jump condicionado ao conteúdo de A, se 0, então s
 //localparam BEQ =
 
 
+/*
+// Agora podemos ter:
+2'b00 = Operações aritméticas (ADD, ADDI)
+2'b01 = Operações de comparação (SUB, SLT, BEQ)  
+2'b10 = Operações lógicas (AND, ANDI)
+2'b11 = Operações lógicas (OR, ORI)
+*/
+
+
+
 always @(*)begin 
     //Inicializando como valores que indicam não operação
     Branch = 1'b0;

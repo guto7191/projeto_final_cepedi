@@ -1,8 +1,8 @@
 module ALU(
-    input [7:0] A;
-    input [7:0] B;
+    input [7:0] A,
+    input [7:0] B,
     input [1:0] Controle_ALUop,
-    output reg zero;
+    output reg zero,
     output reg [7:0] resultado_ALU
 );
 /*
@@ -19,26 +19,29 @@ always @(A, B, Controle_ALUop)begin
     case (Controle_ALUop)
         
         2'b00:begin
-            zero <= 1'b0;
-            resultado_ALU <= A + B;
+            zero = 1'b0;
+            resultado_ALU = A + B;
         end
 
         2'b01: begin
-            if(A==B) zero <= 1'b1;
-            else zero <= 1'b0;
-            resultado_ALU <= A - B;
+            zero = (A==B) ? 1'b1 : 1'b0;
+            resultado_ALU = A - B;
         end
 
         2'b10: begin
-            zero <= 0;
-            resultado_ALU <= A & B;
+            zero = 1'b0;
+            resultado_ALU = A & B;
         end
 
         2'b11: begin
-            zero <= 0;
-            resultado_ALU <= A | B;
+            zero = 1'b0;
+            resultado_ALU = A | B;
         end
-        default: 
+        
+        default: begin
+            zero = 1'b0;
+            resultado_ALU = 8'b0000_0000;
+        end 
     endcase
 end 
 
