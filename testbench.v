@@ -11,7 +11,7 @@ initial begin
     clk = 1'b0;
 end 
 
-always #10000 clk = ~clk; // Período = 20 us
+always #100 clk = ~clk; // Período = 20 us
     
 initial begin 
     $dumpfile("teste.vcd");
@@ -19,7 +19,7 @@ initial begin
 
     // reset ativo por 3 ciclos de clock
     reset = 1'b1;
-    #60000;    
+    #600;    
     reset = 1'b0;
 
     // roda simulação por tempo suficiente

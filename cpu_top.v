@@ -1,8 +1,9 @@
 module cpu_top(
 	input clk,
-	input reset
+	input reset,
+	output [7:0] pc_debug,
+	output [7:0] alu_debug
 );
-
 
 	// conexao caminho de dados 
 	wire [7:0] PC_out, next_PC, PC_plus_1;
@@ -35,6 +36,11 @@ module cpu_top(
 	
 	// Selecao de registrador de destino 
 	wire [1:0] reg_dest;
+	
+	//Etapa de debug
+	
+	assign pc_debug = PC_out;
+	assign alu_debug = resultado_ALU;
 	
 	
 	//Estagio Buscar instruçao
