@@ -1,102 +1,86 @@
 module Controle(
 	input [3:0] opcode,
-	output reg Branch,
+	output reg [2:0] ALUOp,
+	output reg LoadA,
+	output reg LoadB,
 	output reg MemRead,
-	output reg MemtoReg,
-	output reg [1:0] ALUOp,
 	output reg MemWrite,
-	output reg ALUSrc,
-	output reg RegWrite
+	output reg WriteBackMem,
+	output reg BranchZero,
+	output reg BranchEQ,
+	output reg UseImmediate
 );
 
 
-	// Definição das instruções conforme especificado
-	localparam ADD  = 4'b0000;  // ADD #imm - Soma A e B, armazena em A
-	localparam SUB  = 4'b0001;  // SUB #imm - Subtrai B de A, armazena em A  
-	localparam LDA  = 4'b0010;  // LDA #imm - Carrega MEM[imm] em A
-	localparam STA  = 4'b0011;  // STA #imm - Armazena A em MEM[imm]
-	localparam LDB  = 4'b0100;  // LDB #imm - Carrega MEM[imm] em B
-	localparam STB  = 4'b0101;  // STB #imm - Armazena B em MEM[imm]
-	localparam LDC  = 4'b0110;  // LDC #imm - Carrega constante em A
-	localparam JMP  = 4'b0111;  // JMP #imm - Jump se A == 0
-
-
-	always @(*) begin 
-		// valores default dos sinais 
-		Branch = 1'b0;
-		MemRead = 1'b0;
-		MemtoReg = 1'b0;
-		ALUOp = 2'b00;
-		MemWrite = 1'b0;
-		ALUSrc = 1'b0;
-		RegWrite = 1'b0;
-
+	always @(*)begin 
+		// valores default
+		 LoadA = 0;
+		 LoadB = 0;
+		 MemRead = 0;
+		 MemWrite = 0;
+		 WriteBackMem = 0;
+		 BranchZero = 0;
+		 BranchEQ   = 0;
+		 UseImmediate = 0;
+		 ALUOp = 3'b000;
+	
 		case(opcode)
 			
-			ADD: begin
-				ALUSrc = 1'b1; // usa o imediato como operando b
-				RegWrite = 1'b1; // escreve no registrador a
-				ALUOp = 2'b00; // operaçao de soma
+			4'b0000: begin // ADD #X 
+				ALUOp = 3'b000;
+				WriteBackMem = 1;
 			end
 			
-			SUB: begin
-				ALUSrc = 1'b1; 
-				RegWrite = 1'b1; 
-				ALUOp = 2'b01; // opereçao de sub 
+			4'b0001: begin // SUB #X
+				ALUOp = 3'b001;
+				WriteBackMem = 1;
 			end
 			
-			LDA: begin
-				MemRead = 1'b1; // le da memoria 
-				MemtoReg = 1'b1; // dado vem da memoria
-				ALUSrc = 1'b1; //usa o imediato como endereço 
-				RegWrite = 1'b1; // escreve no registrador A
-				ALUOp = 2'b00; // soma para calculo do endereço
-			end
+			4'b0010: begin // LDA #X
+            MemRead = 1;
+            LoadA = 1;
+        end
+		  
+		  4'b0011: begin // STA #X
+            MemWrite = 1;
+        end
+		  
+		  4'b0100: begin // LDB #x
+				MemRead = 1;
+				LoadB = 1;
+		  end
+		  
+		  4'b0101: begin // STB #x
+			MemWrite = 1;
+		  end
 			
-			LDB: begin
-				MemRead = 1'b1; 
-				MemtoReg = 1'b1; 
-				ALUSrc = 1'b1; 
-				RegWrite = 1'b1; // escreve no registrador B
-				ALUOp = 2'b00; // soma para calculo do endereço
-			end
+			4'b0110: begin // LDC #X  
+            UseImmediate = 1;
+            LoadA = 1;
+            ALUOp = 3'b100; 
+        end
+		  
+		  4'b0111: begin // JMP #X
+            BranchZero = 1;
+        end
+		  
+		  4'b1000: begin // AND
+            ALUOp = 3'b010;
+            WriteBackMem = 1;
+        end
 			
-			LDC: begin
-				ALUSrc = 1'b1;   //usa o imediato como dado
-				RegWrite = 1'b1; // escreve no registrador A
-				ALUOp = 2'b00; // soma para calculo do endereço
-			end
+			4'b1001: begin // OR
+            ALUOp = 3'b011;
+            WriteBackMem = 1;
+        end
+		  
+		  4'b1010: begin // BEQ
+            BranchEQ = 1;
+        end
 			
-			STA: begin 
-				MemWrite = 1'b1; // escreve o dado na memoria
-				ALUSrc = 1'b1;  // usa imediato como endereço
-				ALUOp = 2'b00; // soma para calculo de endereço
-			end
-			
-			STB: begin 
-				MemWrite = 1'b1; // escreve o dado na memoria
-				ALUSrc = 1'b1;  // usa imediato como endereço
-				ALUOp = 2'b00; // soma para calculo de endereço
-			end
-			
-			JMP: begin
-				Branch = 1'b1; // Ativa o branch para informar desvio
-				ALUSrc = 1'b1; // usa imediato como offset
-				// nao passa pela alu don't care para ALUOp
-			end
-			
-			default: begin 
-				//Manter valores default
-				Branch = 1'b0;
-				MemRead = 1'b0;
-				MemtoReg = 1'b0;
-				ALUOp = 2'b00;
-				MemWrite = 1'b0;
-				ALUSrc = 1'b0;
-				RegWrite = 1'b0;
-			end
-		endcase
-	
-	end
+		endcase	
+	end 
 	
 endmodule 
+	
+	

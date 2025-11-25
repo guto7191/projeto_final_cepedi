@@ -10,11 +10,11 @@ module ALU(
 
 		always @(*) begin
 			case(ALUOp)
-				3'b00: resultado = A + B;
-				3'b00: resultado = A - B;	
-				3'b00: resultado = A & B; 
-				3'b00: resultado = A | B;
-				3'b00: resultado = A;
+				3'b000: resultado = A + B;
+				3'b001: resultado = A - B;	
+				3'b010: resultado = A & B; 
+				3'b011: resultado = A | B;
+				3'b100: resultado = A;
 				default: resultado = 8'b0000_0000;
 			endcase
 		end
