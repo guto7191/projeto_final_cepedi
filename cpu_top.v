@@ -1,153 +1,155 @@
 module cpu_top(
 	input clk,
 	input reset,
-	output [7:0] pc_debug,
-	output [7:0] alu_debug,
-	output [7:0] regA_data_debug,
-	output [7:0] regB_data_debug
+	output [7:0] debug_alu_result,
+	output [7:0] debug_PC
 );
 
-	// conexao caminho de dados 
-	wire [7:0] PC_out, next_PC, PC_plus_1;
-	wire [7:0] instruction;
-	wire [3:0] opcode;
-	wire [3:0] immediate;
-	wire [7:0] extended_imm;
-
-	// conexao de controle 
-	wire Branch, MemRead, MemtoReg, MemWrite, ALUSrc, RegWrite;
-	wire [1:0] ALUOp;
+	//Debug
+	assign debug_alu_result = alu_result;
+	assign debug_PC = PC_out;
 	
-	//conexao do banco de registrador
-	wire [7:0] regA_data, regB_data;
-	
-	//conexao da alu
-	wire [7:0] resultado_ALU;
-	wire ALU_zero;
-	
-	//conexao de memoria 
-	wire [7:0] mem_data_out;
-	
-	//conexao multiplexador
-	wire [7:0] ALU_src_B;
-	wire [7:0] write_back_data;
-	
-	//logica jump/branch
-	wire [7:0] branch_target;
-	wire PCSrc; 
-	
-	// Selecao de registrador de destino 
-	wire [1:0] reg_dest;
-	
-	//Etapa de debug
-	
-	assign pc_debug = PC_out;
-	assign alu_debug = resultado_ALU;
-	assign regA_data_debug = regA_data;
-	assign regB_data_debug = regB_data;
-	
-	//Estagio Buscar instruçao
-	
-	ProgramCounter PC(
-		.clk(clk),
-		.reset(reset),
-		.data_in(next_PC),
-		.data_out(PC_out)
-	);
-	
-	SomadorPC PC_adder(
-		.PC_endereco(PC_out),
-		.next_endereco(PC_plus_1)
-	);
-	
-	Rom ROM(
-		.ler_endereco(PC_out),
-		.instrucao_out(instruction)
-	);
+	// Fios para conexoes dos componentes 
 	
 	
-	// Estagio de decodificacao da instruçao
-	assign opcode = instruction[7:4];
-	assign immediate = instruction[3:0];
+	//program_counter 
+	wire [7:0] PC_out;
+	wire [7:0] PC_next;
+	wire [7:0] PC_incremented;
 	
-	Controle control_unit(
+	// Opcode e Imediato
+	wire [7:0] instrucao;
+	wire [3:0] opcode = instrucao[7:4];
+	wire [3:0] imediato = instrucao[3:0];
+	
+	// Sinais de controle
+	wire [2:0] ALUOp;
+	wire LoadA, LoadB;
+	wire WriteBackMem;
+	wire UseImmediate;
+	wire BranchZero;
+	wire BranchEQ;
+	
+	// Conexoes reg A e B
+	wire [7:0] regA;
+	wire [7:0] regB;
+	
+	// Conexoes ALU
+	wire [7:0] alu_result;
+	wire alu_zero;
+	wire alu_eq;
+	
+	// Saida da ram 
+	wire [7:0] ram_data_out;
+	
+	
+	//Extencao de imediato
+	wire [7:0] immediate_ext = {4'b0000, imediato};
+	
+	
+	// UNIDADE DE CONTROLE
+	
+	Controle UC (
 		.opcode(opcode),
-		.Branch(Branch),
-		.MemRead(MemRead),
-		.MemtoReg(MemtoReg),
 		.ALUOp(ALUOp),
-		.MemWrite(MemWrite),
-		.ALUSrc(ALUSrc),
-		.RegWrite(RegWrite)
-	);
-	
-	// Determina qual resgistrador escrever baseado na instruçao
-	// localparam STB  = 4'b0101;  // STB #imm - Armazena B em MEM[imm]
-	//localparam LDB  = 4'b0100;  // LDB #imm - Carrega MEM[imm] em B
-	assign reg_dest = (opcode == 4'b0100 || opcode == 4'b0101)? 2'b01 : 2'b00;
-	
-	//Banco de registrado contendo A e B
-	BancoRegistrador reg_file(
-		.clk(clk),
-		.write(RegWrite),
-		.reset(reset),
-		.reg_dest(reg_dest), // A para maioria - B para LDB/STB
-		.wrData(write_back_data),
-		.regA_out(regA_data),
-		.regB_out(regB_data)
-	);
-	
-	//Extensor de sinal 4 para 8 bits
-	assign extended_imm = {4'b0000,immediate};
-	
-	//Estagio de EX
-	//Multiplexador ALU Src B - escolhe entre registrador B ou imediato
-	Mux2x1 ALU_src_B_mux(
-		.in_0(regB_data), // para operaçoes ADD/SUB entre A e B
-		.in_1(extended_imm), // para operaçoes  com immediato
-		.sel(ALUSrc),
-		.out(ALU_src_B)
-	);
-	
-	//ALU sempre usa A como primeira entrada, B ou imediato com segunda
-	ALU alu(
-		.A(regA_data), // sempre A
-		.B(ALU_src_B), // B ou Imediato
-		.Controle_ALUop(ALUOp),
-		.zero(ALU_zero), // JUMP para A==0
-		.resultado_ALU(resultado_ALU)
-	);
-	
-	
-	//calculo do endereço de branch/jump
-	assign branch_target = extended_imm; //JMP usa endereço absoluto
-	
-	
-	// Estagio em memoria 
-	Ram RAM(
-		.clk(clk),
-		.reset(reset),
-		.MemWrite(MemWrite),
+		.LoadA(LoadA),
+		.LoadB(LoadB),
 		.MemRead(MemRead),
-		.Address(extended_imm), //resultado_ALU - era o que estava
-		.WriteData((opcode == 4'b0101) ? regB_data : regA_data), // STB usa B, outros usam A
-		.MemData_out(mem_data_out)                   
+		.MemWrite(MemWrite),
+		.WriteBackMem(WriteBackMem),
+		.BranchZero(BranchZero),
+		.BranchEQ(BranchEQ),
+		.UseImmediate(UseImmediate)
 	);
 	
-	// Multiplexador Write Back - escolhe entre resultado ALU e dado da memoria
-	Mux2x1 write_back_mux (
-		.in_0(resultado_ALU), 
-		.in_1(mem_data_out),
-		.sel(MemtoReg),
-		.out(write_back_data)
+	
+	
+	// ROM 
+	Rom ROM (
+		.ler_endereco(PC_out),
+		.instrucao_out(instrucao)
+	);	
+	
+	
+	// BANCO DE REGISTRADORES
+	
+	// write_enable é ativo quando LoadA OU LoadB nivel alto
+	wire write_enable = LoadA | LoadB;
+
+	
+	
+	// *implementar o MUX: Seleciona qual registrador será escrito
+   wire [1:0] reg_dest = (LoadA) ? 2'b00 :
+                         (LoadB) ? 2'b01 : 2'b00;
+								 
+	// *implementar  o MUX: dado que será escrito em A ou B
+    wire [7:0] write_reg_data =
+            UseImmediate ? immediate_ext :     // LDC
+            MemRead      ? ram_data_out :      // LDA/LDB
+            alu_result;                        // operações ALU							 
+	
+	BancoRegistrador registradores (
+		.clk(clk),
+      .write(write_enable),
+      .reset(reset),
+      .reg_dest(reg_dest),
+      .wrData(write_reg_data),
+      .regA_out(regA),
+      .regB_out(regB)
 	);
-	
-	//Jump salta se A ==0
-	//assign PCSrc = Branch & (regA_data == 8'b0000_0000);
-	assign PCSrc = Branch;
-	
-	// Multiplexador do PC
-	assign next_PC = PCSrc ? branch_target : PC_plus_1;
-	
+		
+
+	// ALU
+	ALU alu (
+		.A(regA),
+		.B(regB),
+		.ALUOp(ALUOp),
+		.resultado(alu_result),
+		.zero(alu_zero),
+		.eq(alu_eq)
+	);
+		
+	// RAM 
+	// * mudar para assign:  Para instruções que guardam em m
+	//emória (STA, STB, ADD#X, etc.)
+    wire [7:0] ram_write_data = alu_result;
+
+	Ram RAM (
+        .clk(clk),
+        .reset(reset),
+        .MemWrite(MemWrite | WriteBackMem),
+        .MemRead(MemRead),
+        .Address({4'b0000, imediato}),   // endereços 0–15
+        .WriteData(ram_write_data),
+        .MemData_out(ram_data_out)
+    );
+	 
+	 // Salto e PC control
+	 
+	 wire branch_taken =
+        (BranchZero && alu_zero) ||
+        (BranchEQ   && alu_eq);
+	 
+	 // MUX PC: incrementa ou faz salto
+    Mux2x1 mux_pc (
+        .in_0(PC_incremented),
+        .in_1(immediate_ext),
+        .sel(branch_taken),
+        .out(PC_next)
+    );
+
+    // Incrementa PC
+    SomadorPC ADD_PC (
+        .PC_endereco(PC_out),
+        .next_endereco(PC_incremented)
+    );
+
+    // Registrador PC
+    ProgramCounter PC (
+        .clk(clk),
+        .reset(reset),
+        .data_in(PC_next),
+        .data_out(PC_out)
+    );
 	
 endmodule 
