@@ -11,118 +11,114 @@
 # 
 # vlog -vlog01compat -work work +incdir+/home/aug/Documents/projeto_final_cepedi {/home/aug/Documents/projeto_final_cepedi/cpu_top.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 19:22:38 on Nov 24,2025
+# Start time: 06:40:06 on Nov 25,2025
 # vlog -reportprogress 300 -vlog01compat -work work "+incdir+/home/aug/Documents/projeto_final_cepedi" /home/aug/Documents/projeto_final_cepedi/cpu_top.v 
 # -- Compiling module cpu_top
 # 
 # Top level modules:
 # 	cpu_top
-# End time: 19:22:38 on Nov 24,2025, Elapsed time: 0:00:00
+# End time: 06:40:06 on Nov 25,2025, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -vlog01compat -work work +incdir+/home/aug/Documents/projeto_final_cepedi {/home/aug/Documents/projeto_final_cepedi/BancoRegistrador.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 19:22:38 on Nov 24,2025
+# Start time: 06:40:06 on Nov 25,2025
 # vlog -reportprogress 300 -vlog01compat -work work "+incdir+/home/aug/Documents/projeto_final_cepedi" /home/aug/Documents/projeto_final_cepedi/BancoRegistrador.v 
 # -- Compiling module BancoRegistrador
 # 
 # Top level modules:
 # 	BancoRegistrador
-# End time: 19:22:38 on Nov 24,2025, Elapsed time: 0:00:00
+# End time: 06:40:06 on Nov 25,2025, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -vlog01compat -work work +incdir+/home/aug/Documents/projeto_final_cepedi {/home/aug/Documents/projeto_final_cepedi/ALU.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 19:22:38 on Nov 24,2025
+# Start time: 06:40:06 on Nov 25,2025
 # vlog -reportprogress 300 -vlog01compat -work work "+incdir+/home/aug/Documents/projeto_final_cepedi" /home/aug/Documents/projeto_final_cepedi/ALU.v 
 # -- Compiling module ALU
 # 
 # Top level modules:
 # 	ALU
-# End time: 19:22:38 on Nov 24,2025, Elapsed time: 0:00:00
+# End time: 06:40:06 on Nov 25,2025, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -vlog01compat -work work +incdir+/home/aug/Documents/projeto_final_cepedi {/home/aug/Documents/projeto_final_cepedi/Controle.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 19:22:38 on Nov 24,2025
+# Start time: 06:40:06 on Nov 25,2025
 # vlog -reportprogress 300 -vlog01compat -work work "+incdir+/home/aug/Documents/projeto_final_cepedi" /home/aug/Documents/projeto_final_cepedi/Controle.v 
 # -- Compiling module Controle
 # 
 # Top level modules:
 # 	Controle
-# End time: 19:22:38 on Nov 24,2025, Elapsed time: 0:00:00
+# End time: 06:40:06 on Nov 25,2025, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -vlog01compat -work work +incdir+/home/aug/Documents/projeto_final_cepedi {/home/aug/Documents/projeto_final_cepedi/Rom.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 19:22:38 on Nov 24,2025
+# Start time: 06:40:06 on Nov 25,2025
 # vlog -reportprogress 300 -vlog01compat -work work "+incdir+/home/aug/Documents/projeto_final_cepedi" /home/aug/Documents/projeto_final_cepedi/Rom.v 
 # -- Compiling module Rom
 # 
 # Top level modules:
 # 	Rom
-# End time: 19:22:38 on Nov 24,2025, Elapsed time: 0:00:00
+# End time: 06:40:06 on Nov 25,2025, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -vlog01compat -work work +incdir+/home/aug/Documents/projeto_final_cepedi {/home/aug/Documents/projeto_final_cepedi/Ram.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 19:22:38 on Nov 24,2025
+# Start time: 06:40:06 on Nov 25,2025
 # vlog -reportprogress 300 -vlog01compat -work work "+incdir+/home/aug/Documents/projeto_final_cepedi" /home/aug/Documents/projeto_final_cepedi/Ram.v 
 # -- Compiling module Ram
 # 
 # Top level modules:
 # 	Ram
-# End time: 19:22:38 on Nov 24,2025, Elapsed time: 0:00:00
+# End time: 06:40:06 on Nov 25,2025, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -vlog01compat -work work +incdir+/home/aug/Documents/projeto_final_cepedi {/home/aug/Documents/projeto_final_cepedi/ProgramCounter.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 19:22:39 on Nov 24,2025
+# Start time: 06:40:06 on Nov 25,2025
 # vlog -reportprogress 300 -vlog01compat -work work "+incdir+/home/aug/Documents/projeto_final_cepedi" /home/aug/Documents/projeto_final_cepedi/ProgramCounter.v 
 # -- Compiling module ProgramCounter
 # 
 # Top level modules:
 # 	ProgramCounter
-# End time: 19:22:39 on Nov 24,2025, Elapsed time: 0:00:00
+# End time: 06:40:06 on Nov 25,2025, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -vlog01compat -work work +incdir+/home/aug/Documents/projeto_final_cepedi {/home/aug/Documents/projeto_final_cepedi/SomadorPC.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 19:22:39 on Nov 24,2025
+# Start time: 06:40:06 on Nov 25,2025
 # vlog -reportprogress 300 -vlog01compat -work work "+incdir+/home/aug/Documents/projeto_final_cepedi" /home/aug/Documents/projeto_final_cepedi/SomadorPC.v 
 # -- Compiling module SomadorPC
 # 
 # Top level modules:
 # 	SomadorPC
-# End time: 19:22:39 on Nov 24,2025, Elapsed time: 0:00:00
+# End time: 06:40:06 on Nov 25,2025, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -vlog01compat -work work +incdir+/home/aug/Documents/projeto_final_cepedi {/home/aug/Documents/projeto_final_cepedi/Mux2x1.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 19:22:39 on Nov 24,2025
+# Start time: 06:40:06 on Nov 25,2025
 # vlog -reportprogress 300 -vlog01compat -work work "+incdir+/home/aug/Documents/projeto_final_cepedi" /home/aug/Documents/projeto_final_cepedi/Mux2x1.v 
 # -- Compiling module Mux2x1
 # 
 # Top level modules:
 # 	Mux2x1
-# End time: 19:22:39 on Nov 24,2025, Elapsed time: 0:00:00
+# End time: 06:40:06 on Nov 25,2025, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # 
+vsim work.SomadorPC
+# vsim work.SomadorPC 
+# Start time: 06:40:12 on Nov 25,2025
+# Loading work.SomadorPC
 vlog -reportprogress 300 -work work /home/aug/Documents/projeto_final_cepedi/testbench.v
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 19:22:49 on Nov 24,2025
+# Start time: 06:40:29 on Nov 25,2025
 # vlog -reportprogress 300 -work work /home/aug/Documents/projeto_final_cepedi/testbench.v 
 # -- Compiling module testbench
 # 
 # Top level modules:
 # 	testbench
-# End time: 19:22:49 on Nov 24,2025, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-vlog -reportprogress 300 -work work /home/aug/Documents/projeto_final_cepedi/testbench.v
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 19:22:56 on Nov 24,2025
-# vlog -reportprogress 300 -work work /home/aug/Documents/projeto_final_cepedi/testbench.v 
-# -- Compiling module testbench
-# 
-# Top level modules:
-# 	testbench
-# End time: 19:22:56 on Nov 24,2025, Elapsed time: 0:00:00
+# End time: 06:40:29 on Nov 25,2025, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 vsim work.testbench
+# End time: 06:40:34 on Nov 25,2025, Elapsed time: 0:00:22
+# Errors: 0, Warnings: 0
 # vsim work.testbench 
-# Start time: 19:23:00 on Nov 24,2025
+# Start time: 06:40:34 on Nov 25,2025
 # Loading work.testbench
 # Loading work.cpu_top
 # Loading work.ProgramCounter
@@ -133,64 +129,13 @@ vsim work.testbench
 # Loading work.Mux2x1
 # Loading work.ALU
 # Loading work.Ram
-# ** Warning: (vsim-3017) /home/aug/Documents/projeto_final_cepedi/testbench.v(5): [TFMPC] - Too few port connections. Expected 4, found 2.
+# ** Warning: (vsim-3017) /home/aug/Documents/projeto_final_cepedi/testbench.v(5): [TFMPC] - Too few port connections. Expected 6, found 2.
 #    Time: 0 ps  Iteration: 0  Instance: /testbench/cpu File: /home/aug/Documents/projeto_final_cepedi/cpu_top.v
 # ** Warning: (vsim-3722) /home/aug/Documents/projeto_final_cepedi/testbench.v(5): [TFMPC] - Missing connection for port 'pc_debug'.
 # ** Warning: (vsim-3722) /home/aug/Documents/projeto_final_cepedi/testbench.v(5): [TFMPC] - Missing connection for port 'alu_debug'.
+# ** Warning: (vsim-3722) /home/aug/Documents/projeto_final_cepedi/testbench.v(5): [TFMPC] - Missing connection for port 'regA_data_debug'.
+# ** Warning: (vsim-3722) /home/aug/Documents/projeto_final_cepedi/testbench.v(5): [TFMPC] - Missing connection for port 'regB_data_debug'.
 add wave -position insertpoint sim:/testbench/cpu/*
-run -all
-# ** Warning: (vsim-3116) Problem reading symbols from linux-gate.so.1 : can not open ELF file.
-# ** Warning: (vsim-3116) Problem reading symbols from /lib/i386-linux-gnu/libpthread.so.0 : module was loaded at an absolute address.
-# ** Warning: (vsim-3116) Problem reading symbols from /lib/i386-linux-gnu/librt.so.1 : module was loaded at an absolute address.
-# ** Warning: (vsim-3116) Problem reading symbols from /lib/i386-linux-gnu/libdl.so.2 : module was loaded at an absolute address.
-# ** Warning: (vsim-3116) Problem reading symbols from /lib/i386-linux-gnu/libm.so.6 : module was loaded at an absolute address.
-# ** Warning: (vsim-3116) Problem reading symbols from /lib/i386-linux-gnu/libc.so.6 : module was loaded at an absolute address.
-# ** Warning: (vsim-3116) Problem reading symbols from /lib/ld-linux.so.2 : module was loaded at an absolute address.
-# ** Note: $finish    : /home/aug/Documents/projeto_final_cepedi/testbench.v(28)
-#    Time: 560 ns  Iteration: 0  Instance: /testbench
-# 1
-# Break in Module testbench at /home/aug/Documents/projeto_final_cepedi/testbench.v line 28
-vlog -reportprogress 300 -work work /home/aug/Documents/projeto_final_cepedi/testbench.v
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 20:16:33 on Nov 24,2025
-# vlog -reportprogress 300 -work work /home/aug/Documents/projeto_final_cepedi/testbench.v 
-# -- Compiling module testbench
-# 
-# Top level modules:
-# 	testbench
-# End time: 20:16:33 on Nov 24,2025, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-vlog -reportprogress 300 -work work /home/aug/Documents/projeto_final_cepedi/testbench.v
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 20:16:35 on Nov 24,2025
-# vlog -reportprogress 300 -work work /home/aug/Documents/projeto_final_cepedi/testbench.v 
-# -- Compiling module testbench
-# 
-# Top level modules:
-# 	testbench
-# End time: 20:16:35 on Nov 24,2025, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-vsim work.testbench
-# End time: 20:16:43 on Nov 24,2025, Elapsed time: 0:53:43
-# Errors: 0, Warnings: 10
-# vsim work.testbench 
-# Start time: 20:16:43 on Nov 24,2025
-# Loading work.testbench
-# Loading work.cpu_top
-# Loading work.ProgramCounter
-# Loading work.SomadorPC
-# Loading work.Rom
-# Loading work.Controle
-# Loading work.BancoRegistrador
-# Loading work.Mux2x1
-# Loading work.ALU
-# Loading work.Ram
-# ** Warning: (vsim-3017) /home/aug/Documents/projeto_final_cepedi/testbench.v(5): [TFMPC] - Too few port connections. Expected 4, found 2.
-#    Time: 0 ps  Iteration: 0  Instance: /testbench/cpu File: /home/aug/Documents/projeto_final_cepedi/cpu_top.v
-# ** Warning: (vsim-3722) /home/aug/Documents/projeto_final_cepedi/testbench.v(5): [TFMPC] - Missing connection for port 'pc_debug'.
-# ** Warning: (vsim-3722) /home/aug/Documents/projeto_final_cepedi/testbench.v(5): [TFMPC] - Missing connection for port 'alu_debug'.
-add wave -position insertpoint sim:/testbench/cpu/*
-# Break key hit
 run -all
 # ** Warning: (vsim-3116) Problem reading symbols from linux-gate.so.1 : can not open ELF file.
 # ** Warning: (vsim-3116) Problem reading symbols from /lib/i386-linux-gnu/libpthread.so.0 : module was loaded at an absolute address.
@@ -203,5 +148,5 @@ run -all
 #    Time: 500600 ps  Iteration: 0  Instance: /testbench
 # 1
 # Break in Module testbench at /home/aug/Documents/projeto_final_cepedi/testbench.v line 28
-# End time: 20:24:31 on Nov 24,2025, Elapsed time: 0:07:48
-# Errors: 0, Warnings: 10
+# End time: 07:38:23 on Nov 25,2025, Elapsed time: 0:57:49
+# Errors: 0, Warnings: 12

@@ -2,7 +2,9 @@ module cpu_top(
 	input clk,
 	input reset,
 	output [7:0] pc_debug,
-	output [7:0] alu_debug
+	output [7:0] alu_debug,
+	output [7:0] regA_data_debug,
+	output [7:0] regB_data_debug
 );
 
 	// conexao caminho de dados 
@@ -41,7 +43,8 @@ module cpu_top(
 	
 	assign pc_debug = PC_out;
 	assign alu_debug = resultado_ALU;
-	
+	assign regA_data_debug = regA_data;
+	assign regB_data_debug = regB_data;
 	
 	//Estagio Buscar instruçao
 	
@@ -98,7 +101,7 @@ module cpu_top(
 	assign extended_imm = {4'b0000,immediate};
 	
 	//Estagio de EX
-	//ultiplexador ALU Src B - escolhe entre registrador B ou imediato
+	//Multiplexador ALU Src B - escolhe entre registrador B ou imediato
 	Mux2x1 ALU_src_B_mux(
 		.in_0(regB_data), // para operaçoes ADD/SUB entre A e B
 		.in_1(extended_imm), // para operaçoes  com immediato
@@ -126,9 +129,9 @@ module cpu_top(
 		.reset(reset),
 		.MemWrite(MemWrite),
 		.MemRead(MemRead),
-		.Address(resultado_ALU),
+		.Address(extended_imm), //resultado_ALU - era o que estava
 		.WriteData((opcode == 4'b0101) ? regB_data : regA_data), // STB usa B, outros usam A
-		.MemData_out(mem_data_out)
+		.MemData_out(mem_data_out)                   
 	);
 	
 	// Multiplexador Write Back - escolhe entre resultado ALU e dado da memoria
@@ -140,7 +143,8 @@ module cpu_top(
 	);
 	
 	//Jump salta se A ==0
-	assign PCSrc = Branch & (regA_data == 8'b0000_0000);
+	//assign PCSrc = Branch & (regA_data == 8'b0000_0000);
+	assign PCSrc = Branch;
 	
 	// Multiplexador do PC
 	assign next_PC = PCSrc ? branch_target : PC_plus_1;

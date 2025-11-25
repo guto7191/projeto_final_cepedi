@@ -9,7 +9,7 @@ z2
 cModel Technology
 Z0 d/home/aug/Documents/projeto_final_cepedi/simulation/modelsim
 vALU
-Z1 !s110 1764022958
+Z1 !s110 1764063606
 !i10b 1
 !s100 @MSeTBLKizjPEY^96Ja=62
 IeoC[^]AU6JE<[T^XD^C:Z0
@@ -23,7 +23,7 @@ Z3 OV;L;10.5b;63
 r1
 !s85 0
 31
-Z4 !s108 1764022958.000000
+Z4 !s108 1764063606.000000
 !s107 /home/aug/Documents/projeto_final_cepedi/ALU.v|
 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+/home/aug/Documents/projeto_final_cepedi|/home/aug/Documents/projeto_final_cepedi/ALU.v|
 !i113 1
@@ -80,11 +80,11 @@ n@controle
 vcpu_top
 R1
 !i10b 1
-!s100 Jn]Zmfjbl[6Hf0HdLZXoI1
-IbWR:_PldBK;f6Q9`XP@Sm0
+!s100 004YeK1k<Z>?deNz27W>S0
+IVfm<=8=c^jd@Oi1nC05RU3
 R2
 R0
-w1764022306
+w1764063575
 8/home/aug/Documents/projeto_final_cepedi/cpu_top.v
 F/home/aug/Documents/projeto_final_cepedi/cpu_top.v
 L0 1
@@ -100,7 +100,7 @@ R5
 R6
 R7
 vMux2x1
-Z8 !s110 1764022959
+R1
 !i10b 1
 !s100 N_0@TICZF6SCla=0zjU:W1
 IkJ=LSTB>@B[zihcMXo4DF2
@@ -114,7 +114,7 @@ R3
 r1
 !s85 0
 31
-Z9 !s108 1764022959.000000
+R4
 !s107 /home/aug/Documents/projeto_final_cepedi/Mux2x1.v|
 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+/home/aug/Documents/projeto_final_cepedi|/home/aug/Documents/projeto_final_cepedi/Mux2x1.v|
 !i113 1
@@ -123,7 +123,7 @@ R6
 R7
 n@mux2x1
 vProgramCounter
-R8
+R1
 !i10b 1
 !s100 8SUbZ1`nEYV?oF3TmY5_Q0
 IJoVB[=`eizmzJBKzAKSD31
@@ -137,7 +137,7 @@ R3
 r1
 !s85 0
 31
-R9
+R4
 !s107 /home/aug/Documents/projeto_final_cepedi/ProgramCounter.v|
 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+/home/aug/Documents/projeto_final_cepedi|/home/aug/Documents/projeto_final_cepedi/ProgramCounter.v|
 !i113 1
@@ -175,7 +175,7 @@ R1
 I1V?lkO62=XWE;[]>GaV@A3
 R2
 R0
-w1763314238
+w1764063171
 8/home/aug/Documents/projeto_final_cepedi/Rom.v
 F/home/aug/Documents/projeto_final_cepedi/Rom.v
 L0 38
@@ -192,7 +192,7 @@ R6
 R7
 n@rom
 vSomadorPC
-R8
+R1
 !i10b 1
 !s100 2O`VBTI@5_0F9LR8U>@zL2
 IG2e1`oG32DbFFZ2EZ]OI31
@@ -206,7 +206,7 @@ R3
 r1
 !s85 0
 31
-R9
+R4
 !s107 /home/aug/Documents/projeto_final_cepedi/SomadorPC.v|
 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+/home/aug/Documents/projeto_final_cepedi|/home/aug/Documents/projeto_final_cepedi/SomadorPC.v|
 !i113 1
@@ -215,7 +215,7 @@ R6
 R7
 n@somador@p@c
 vtestbench
-!s110 1764026195
+!s110 1764063629
 !i10b 1
 !s100 @0S@Uok5M@?E`5S4A@NLK3
 Ikl8=dnIZKgn6za?aAS>Q91
@@ -229,7 +229,7 @@ R3
 r1
 !s85 0
 31
-!s108 1764026195.000000
+!s108 1764063629.000000
 !s107 /home/aug/Documents/projeto_final_cepedi/testbench.v|
 !s90 -reportprogress|300|-work|work|/home/aug/Documents/projeto_final_cepedi/testbench.v|
 !i113 1
