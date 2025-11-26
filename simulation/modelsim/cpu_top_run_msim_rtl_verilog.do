@@ -14,4 +14,5 @@ vlog -vlog01compat -work work +incdir+/home/aug/Documents/projeto_final_cepedi {
 vlog -vlog01compat -work work +incdir+/home/aug/Documents/projeto_final_cepedi {/home/aug/Documents/projeto_final_cepedi/ProgramCounter.v}
 vlog -vlog01compat -work work +incdir+/home/aug/Documents/projeto_final_cepedi {/home/aug/Documents/projeto_final_cepedi/SomadorPC.v}
 vlog -vlog01compat -work work +incdir+/home/aug/Documents/projeto_final_cepedi {/home/aug/Documents/projeto_final_cepedi/Mux2x1.v}
+vlog -vlog01compat -work work +incdir+/home/aug/Documents/projeto_final_cepedi {/home/aug/Documents/projeto_final_cepedi/mux_write_reg_data.v}
 

@@ -57,8 +57,6 @@ module cpu_top(
 	//Extencao de imediato
 	assign immediate_ext = {4'b0000, imediato}; // modificar na ram 
 	
-	
-	
 	//Debug
 	assign debug_alu_result = alu_result;
 	assign debug_PC = PC_out;
@@ -93,15 +91,27 @@ module cpu_top(
 
 	
 	
-	// *implementar o MUX: Seleciona qual registrador será escrito
+	// Seleciona qual registrador será escrito
 	assign reg_dest = (LoadA) ? 2'b00 :
-                         (LoadB) ? 2'b01 : 2'b00;
-								 
-	// *implementar  o MUX: dado que será escrito em A ou B
+                     (LoadB) ? 2'b01 : 2'b00;
+								 							 
+	// O dado que será escrito em A ou B
+	
+	mux_write_reg_data mux_reg_data(
+		.UseImmediate(UseImmediate),
+		.immediate_ext(immediate_ext),
+		.MemRead(MemRead),
+		.ram_data_out(ram_data_out),
+		.alu_result(alu_result),
+		.write_reg_data(write_reg_data)
+	);
+	
+	/*
    assign write_reg_data =
             UseImmediate ? immediate_ext :     // LDC
             MemRead      ? ram_data_out :      // LDA/LDB
             alu_result;                        // operações ALU							 
+	*/
 	
 	BancoRegistrador registradores (
 		.clk(clk),

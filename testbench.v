@@ -35,7 +35,7 @@ module testbench;
         $display("=== Iniciando Simulação ===");
 
         $monitor(
-            "t=%0dns | PC=%02h | Instr=%02h | A=%02h | B=%02h | ALU=%02h | Zero=%b | EQ=%b",
+            "t=%0dns | PC=%02h | Instr=%02h | A=%02h | B=%02h | ALU=%02h |	Zero=%b | EQ=%b | write_reg_data=%b | ram_write_data=%b | ram_data_out=%b",
             $time,
             DUT.PC_out,
             DUT.instrucao,
@@ -43,7 +43,10 @@ module testbench;
             DUT.regB,
             DUT.alu_result,
             DUT.alu_zero,
-            DUT.alu_eq
+            DUT.alu_eq,
+				DUT.write_reg_data,
+				DUT.ram_write_data,
+				DUT.ram_data_out
         );
     end
 
