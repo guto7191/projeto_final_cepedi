@@ -5,9 +5,7 @@ module cpu_top(
 	output [7:0] debug_PC
 );
 
-	//Debug
-	assign debug_alu_result = alu_result;
-	assign debug_PC = PC_out;
+	
 	
 	// Fios para conexoes dos componentes 
 	
@@ -19,13 +17,14 @@ module cpu_top(
 	
 	// Opcode e Imediato
 	wire [7:0] instrucao;
-	wire [3:0] opcode = instrucao[7:4];
-	wire [3:0] imediato = instrucao[3:0];
+	wire [7:0] immediate_ext;
+	wire [3:0] opcode;
+	wire [3:0] imediato;
 	
 	// Sinais de controle
 	wire [2:0] ALUOp;
 	wire LoadA, LoadB;
-	wire WriteBackMem;
+	wire MemRead, MemWrite;
 	wire UseImmediate;
 	wire BranchZero;
 	wire BranchEQ;
@@ -42,10 +41,27 @@ module cpu_top(
 	// Saida da ram 
 	wire [7:0] ram_data_out;
 	
+	// fios auxiliares 
+	wire write_enable;
+	wire [1:0] reg_dest;
+	wire [7:0] write_reg_data;
+	wire [7:0] ram_write_data;
+	
+	// sinais de salto
+	wire branch_taken;
+	
+	// Decompondo instrucao
+	assign opcode = instrucao[7:4];
+	assign imediato = instrucao[3:0];
 	
 	//Extencao de imediato
-	wire [7:0] immediate_ext = {4'b0000, imediato};
+	assign immediate_ext = {4'b0000, imediato}; // modificar na ram 
 	
+	
+	
+	//Debug
+	assign debug_alu_result = alu_result;
+	assign debug_PC = PC_out;
 	
 	// UNIDADE DE CONTROLE
 	
@@ -56,7 +72,6 @@ module cpu_top(
 		.LoadB(LoadB),
 		.MemRead(MemRead),
 		.MemWrite(MemWrite),
-		.WriteBackMem(WriteBackMem),
 		.BranchZero(BranchZero),
 		.BranchEQ(BranchEQ),
 		.UseImmediate(UseImmediate)
@@ -74,16 +89,16 @@ module cpu_top(
 	// BANCO DE REGISTRADORES
 	
 	// write_enable é ativo quando LoadA OU LoadB nivel alto
-	wire write_enable = LoadA | LoadB;
+	assign write_enable = LoadA | LoadB;
 
 	
 	
 	// *implementar o MUX: Seleciona qual registrador será escrito
-   wire [1:0] reg_dest = (LoadA) ? 2'b00 :
+	assign reg_dest = (LoadA) ? 2'b00 :
                          (LoadB) ? 2'b01 : 2'b00;
 								 
 	// *implementar  o MUX: dado que será escrito em A ou B
-    wire [7:0] write_reg_data =
+   assign write_reg_data =
             UseImmediate ? immediate_ext :     // LDC
             MemRead      ? ram_data_out :      // LDA/LDB
             alu_result;                        // operações ALU							 
@@ -92,7 +107,7 @@ module cpu_top(
 		.clk(clk),
       .write(write_enable),
       .reset(reset),
-      .reg_dest(reg_dest),
+      .reg_dest(reg_dest),	
       .wrData(write_reg_data),
       .regA_out(regA),
       .regB_out(regB)
@@ -110,23 +125,23 @@ module cpu_top(
 	);
 		
 	// RAM 
-	// * mudar para assign:  Para instruções que guardam em m
-	//emória (STA, STB, ADD#X, etc.)
-    wire [7:0] ram_write_data = alu_result;
+	// Para instruções que guardam em 
+	//memória (STA, STB, ADD#X, etc.)
+   assign ram_write_data = alu_result;
 
 	Ram RAM (
         .clk(clk),
         .reset(reset),
-        .MemWrite(MemWrite | WriteBackMem),
+        .MemWrite(MemWrite), 
         .MemRead(MemRead),
-        .Address({4'b0000, imediato}),   // endereços 0–15
+        .Address(immediate_ext),   // endereços 0–15
         .WriteData(ram_write_data),
         .MemData_out(ram_data_out)
     );
 	 
 	 // Salto e PC control
 	 
-	 wire branch_taken =
+	 assign branch_taken =
         (BranchZero && alu_zero) ||
         (BranchEQ   && alu_eq);
 	 

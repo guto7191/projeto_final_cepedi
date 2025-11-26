@@ -9,7 +9,7 @@ initial begin
     //---------------------------------------
     // PROGRAMA DE TESTE COMPLETO
     //---------------------------------------
-	/*
+	
     memoria[0]  = {4'b0110, 4'b0001}; // LDC  #01H   A = 01H
     memoria[1]  = {4'b0110, 4'b1001}; // LDC  #09H   A = 09H
     memoria[2]  = {4'b0100, 4'b0110}; // LDB  #06H   B = MEM[06H]
@@ -31,11 +31,11 @@ initial begin
 
     // Teste JMP condicional
     memoria[8]  = {4'b0111, 4'b0101}; // JMP  #05H   se A == 0 → PC = 05H
-		*/
+		
     //---------------------------------------
     // TESTES DAS NOVAS INSTRUÇÕES
     //---------------------------------------
-
+/*
     memoria[0]  = {4'b0110, 4'b1111}; // LDC #0F     A = 0F
     memoria[1] = {4'b0100, 4'b0001}; // LDB #01     B = MEM[01]
 
@@ -48,7 +48,7 @@ initial begin
     // BEQ
     memoria[4] = {4'b1010, 4'b0001}; // BEQ #01H    se A == B → PC = 01
 
-   
+   */
 end
 
 always @(*) begin

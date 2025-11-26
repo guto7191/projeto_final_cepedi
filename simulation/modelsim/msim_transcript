@@ -11,131 +11,133 @@
 # 
 # vlog -vlog01compat -work work +incdir+/home/aug/Documents/projeto_final_cepedi {/home/aug/Documents/projeto_final_cepedi/cpu_top.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 06:40:06 on Nov 25,2025
+# Start time: 21:31:51 on Nov 25,2025
 # vlog -reportprogress 300 -vlog01compat -work work "+incdir+/home/aug/Documents/projeto_final_cepedi" /home/aug/Documents/projeto_final_cepedi/cpu_top.v 
 # -- Compiling module cpu_top
 # 
 # Top level modules:
 # 	cpu_top
-# End time: 06:40:06 on Nov 25,2025, Elapsed time: 0:00:00
+# End time: 21:31:51 on Nov 25,2025, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -vlog01compat -work work +incdir+/home/aug/Documents/projeto_final_cepedi {/home/aug/Documents/projeto_final_cepedi/BancoRegistrador.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 06:40:06 on Nov 25,2025
+# Start time: 21:31:51 on Nov 25,2025
 # vlog -reportprogress 300 -vlog01compat -work work "+incdir+/home/aug/Documents/projeto_final_cepedi" /home/aug/Documents/projeto_final_cepedi/BancoRegistrador.v 
 # -- Compiling module BancoRegistrador
 # 
 # Top level modules:
 # 	BancoRegistrador
-# End time: 06:40:06 on Nov 25,2025, Elapsed time: 0:00:00
+# End time: 21:31:51 on Nov 25,2025, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -vlog01compat -work work +incdir+/home/aug/Documents/projeto_final_cepedi {/home/aug/Documents/projeto_final_cepedi/ALU.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 06:40:06 on Nov 25,2025
+# Start time: 21:31:51 on Nov 25,2025
 # vlog -reportprogress 300 -vlog01compat -work work "+incdir+/home/aug/Documents/projeto_final_cepedi" /home/aug/Documents/projeto_final_cepedi/ALU.v 
 # -- Compiling module ALU
 # 
 # Top level modules:
 # 	ALU
-# End time: 06:40:06 on Nov 25,2025, Elapsed time: 0:00:00
+# End time: 21:31:51 on Nov 25,2025, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -vlog01compat -work work +incdir+/home/aug/Documents/projeto_final_cepedi {/home/aug/Documents/projeto_final_cepedi/Controle.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 06:40:06 on Nov 25,2025
+# Start time: 21:31:51 on Nov 25,2025
 # vlog -reportprogress 300 -vlog01compat -work work "+incdir+/home/aug/Documents/projeto_final_cepedi" /home/aug/Documents/projeto_final_cepedi/Controle.v 
 # -- Compiling module Controle
 # 
 # Top level modules:
 # 	Controle
-# End time: 06:40:06 on Nov 25,2025, Elapsed time: 0:00:00
+# End time: 21:31:51 on Nov 25,2025, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -vlog01compat -work work +incdir+/home/aug/Documents/projeto_final_cepedi {/home/aug/Documents/projeto_final_cepedi/Rom.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 06:40:06 on Nov 25,2025
+# Start time: 21:31:51 on Nov 25,2025
 # vlog -reportprogress 300 -vlog01compat -work work "+incdir+/home/aug/Documents/projeto_final_cepedi" /home/aug/Documents/projeto_final_cepedi/Rom.v 
 # -- Compiling module Rom
 # 
 # Top level modules:
 # 	Rom
-# End time: 06:40:06 on Nov 25,2025, Elapsed time: 0:00:00
+# End time: 21:31:51 on Nov 25,2025, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -vlog01compat -work work +incdir+/home/aug/Documents/projeto_final_cepedi {/home/aug/Documents/projeto_final_cepedi/Ram.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 06:40:06 on Nov 25,2025
+# Start time: 21:31:51 on Nov 25,2025
 # vlog -reportprogress 300 -vlog01compat -work work "+incdir+/home/aug/Documents/projeto_final_cepedi" /home/aug/Documents/projeto_final_cepedi/Ram.v 
 # -- Compiling module Ram
 # 
 # Top level modules:
 # 	Ram
-# End time: 06:40:06 on Nov 25,2025, Elapsed time: 0:00:00
+# End time: 21:31:52 on Nov 25,2025, Elapsed time: 0:00:01
 # Errors: 0, Warnings: 0
 # vlog -vlog01compat -work work +incdir+/home/aug/Documents/projeto_final_cepedi {/home/aug/Documents/projeto_final_cepedi/ProgramCounter.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 06:40:06 on Nov 25,2025
+# Start time: 21:31:52 on Nov 25,2025
 # vlog -reportprogress 300 -vlog01compat -work work "+incdir+/home/aug/Documents/projeto_final_cepedi" /home/aug/Documents/projeto_final_cepedi/ProgramCounter.v 
 # -- Compiling module ProgramCounter
 # 
 # Top level modules:
 # 	ProgramCounter
-# End time: 06:40:06 on Nov 25,2025, Elapsed time: 0:00:00
+# End time: 21:31:52 on Nov 25,2025, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -vlog01compat -work work +incdir+/home/aug/Documents/projeto_final_cepedi {/home/aug/Documents/projeto_final_cepedi/SomadorPC.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 06:40:06 on Nov 25,2025
+# Start time: 21:31:52 on Nov 25,2025
 # vlog -reportprogress 300 -vlog01compat -work work "+incdir+/home/aug/Documents/projeto_final_cepedi" /home/aug/Documents/projeto_final_cepedi/SomadorPC.v 
 # -- Compiling module SomadorPC
 # 
 # Top level modules:
 # 	SomadorPC
-# End time: 06:40:06 on Nov 25,2025, Elapsed time: 0:00:00
+# End time: 21:31:52 on Nov 25,2025, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -vlog01compat -work work +incdir+/home/aug/Documents/projeto_final_cepedi {/home/aug/Documents/projeto_final_cepedi/Mux2x1.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 06:40:06 on Nov 25,2025
+# Start time: 21:31:52 on Nov 25,2025
 # vlog -reportprogress 300 -vlog01compat -work work "+incdir+/home/aug/Documents/projeto_final_cepedi" /home/aug/Documents/projeto_final_cepedi/Mux2x1.v 
 # -- Compiling module Mux2x1
 # 
 # Top level modules:
 # 	Mux2x1
-# End time: 06:40:06 on Nov 25,2025, Elapsed time: 0:00:00
+# End time: 21:31:52 on Nov 25,2025, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # 
-vsim work.SomadorPC
-# vsim work.SomadorPC 
-# Start time: 06:40:12 on Nov 25,2025
-# Loading work.SomadorPC
 vlog -reportprogress 300 -work work /home/aug/Documents/projeto_final_cepedi/testbench.v
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 06:40:29 on Nov 25,2025
+# Start time: 21:32:03 on Nov 25,2025
 # vlog -reportprogress 300 -work work /home/aug/Documents/projeto_final_cepedi/testbench.v 
 # -- Compiling module testbench
 # 
 # Top level modules:
 # 	testbench
-# End time: 06:40:29 on Nov 25,2025, Elapsed time: 0:00:00
+# End time: 21:32:03 on Nov 25,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vlog -reportprogress 300 -work work /home/aug/Documents/projeto_final_cepedi/testbench.v
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 21:32:04 on Nov 25,2025
+# vlog -reportprogress 300 -work work /home/aug/Documents/projeto_final_cepedi/testbench.v 
+# -- Compiling module testbench
+# 
+# Top level modules:
+# 	testbench
+# End time: 21:32:04 on Nov 25,2025, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 vsim work.testbench
-# End time: 06:40:34 on Nov 25,2025, Elapsed time: 0:00:22
-# Errors: 0, Warnings: 0
 # vsim work.testbench 
-# Start time: 06:40:34 on Nov 25,2025
+# Start time: 21:32:12 on Nov 25,2025
 # Loading work.testbench
 # Loading work.cpu_top
-# Loading work.ProgramCounter
-# Loading work.SomadorPC
-# Loading work.Rom
 # Loading work.Controle
+# Loading work.Rom
 # Loading work.BancoRegistrador
-# Loading work.Mux2x1
 # Loading work.ALU
 # Loading work.Ram
-# ** Warning: (vsim-3017) /home/aug/Documents/projeto_final_cepedi/testbench.v(5): [TFMPC] - Too few port connections. Expected 6, found 2.
-#    Time: 0 ps  Iteration: 0  Instance: /testbench/cpu File: /home/aug/Documents/projeto_final_cepedi/cpu_top.v
-# ** Warning: (vsim-3722) /home/aug/Documents/projeto_final_cepedi/testbench.v(5): [TFMPC] - Missing connection for port 'pc_debug'.
-# ** Warning: (vsim-3722) /home/aug/Documents/projeto_final_cepedi/testbench.v(5): [TFMPC] - Missing connection for port 'alu_debug'.
-# ** Warning: (vsim-3722) /home/aug/Documents/projeto_final_cepedi/testbench.v(5): [TFMPC] - Missing connection for port 'regA_data_debug'.
-# ** Warning: (vsim-3722) /home/aug/Documents/projeto_final_cepedi/testbench.v(5): [TFMPC] - Missing connection for port 'regB_data_debug'.
-add wave -position insertpoint sim:/testbench/cpu/*
+# Loading work.Mux2x1
+# Loading work.SomadorPC
+# Loading work.ProgramCounter
+# ** Warning: (vsim-3017) /home/aug/Documents/projeto_final_cepedi/testbench.v(9): [TFMPC] - Too few port connections. Expected 4, found 2.
+#    Time: 0 ps  Iteration: 0  Instance: /testbench/DUT File: /home/aug/Documents/projeto_final_cepedi/cpu_top.v
+# ** Warning: (vsim-3722) /home/aug/Documents/projeto_final_cepedi/testbench.v(9): [TFMPC] - Missing connection for port 'debug_alu_result'.
+# ** Warning: (vsim-3722) /home/aug/Documents/projeto_final_cepedi/testbench.v(9): [TFMPC] - Missing connection for port 'debug_PC'.
+add wave -position insertpoint sim:/testbench/DUT/*
 run -all
 # ** Warning: (vsim-3116) Problem reading symbols from linux-gate.so.1 : can not open ELF file.
 # ** Warning: (vsim-3116) Problem reading symbols from /lib/i386-linux-gnu/libpthread.so.0 : module was loaded at an absolute address.
@@ -144,9 +146,161 @@ run -all
 # ** Warning: (vsim-3116) Problem reading symbols from /lib/i386-linux-gnu/libm.so.6 : module was loaded at an absolute address.
 # ** Warning: (vsim-3116) Problem reading symbols from /lib/i386-linux-gnu/libc.so.6 : module was loaded at an absolute address.
 # ** Warning: (vsim-3116) Problem reading symbols from /lib/ld-linux.so.2 : module was loaded at an absolute address.
-# ** Note: $finish    : /home/aug/Documents/projeto_final_cepedi/testbench.v(28)
-#    Time: 500600 ps  Iteration: 0  Instance: /testbench
-# 1
-# Break in Module testbench at /home/aug/Documents/projeto_final_cepedi/testbench.v line 28
-# End time: 07:38:23 on Nov 25,2025, Elapsed time: 0:57:49
-# Errors: 0, Warnings: 12
+# === Iniciando Simulação ===
+# t=0ns | PC=xx | Instr=xx | A=xx | B=xx | ALU=xx | Zero=x | EQ=x
+# t=10ns | PC=00 | Instr=61 | A=00 | B=00 | ALU=00 | Zero=1 | EQ=1
+# t=30ns | PC=01 | Instr=69 | A=01 | B=00 | ALU=01 | Zero=0 | EQ=0
+# t=50ns | PC=02 | Instr=46 | A=09 | B=00 | ALU=09 | Zero=0 | EQ=0
+# t=70ns | PC=03 | Instr=00 | A=09 | B=00 | ALU=09 | Zero=0 | EQ=0
+# t=90ns | PC=04 | Instr=37 | A=09 | B=00 | ALU=09 | Zero=0 | EQ=0
+# t=110ns | PC=05 | Instr=10 | A=09 | B=00 | ALU=09 | Zero=0 | EQ=0
+# t=130ns | PC=06 | Instr=26 | A=09 | B=00 | ALU=09 | Zero=0 | EQ=0
+# t=150ns | PC=07 | Instr=57 | A=00 | B=00 | ALU=00 | Zero=1 | EQ=1
+# t=170ns | PC=08 | Instr=75 | A=00 | B=00 | ALU=00 | Zero=1 | EQ=1
+# t=190ns | PC=05 | Instr=10 | A=00 | B=00 | ALU=00 | Zero=1 | EQ=1
+# t=210ns | PC=06 | Instr=26 | A=00 | B=00 | ALU=00 | Zero=1 | EQ=1
+# t=230ns | PC=07 | Instr=57 | A=00 | B=00 | ALU=00 | Zero=1 | EQ=1
+# t=250ns | PC=08 | Instr=75 | A=00 | B=00 | ALU=00 | Zero=1 | EQ=1
+# t=270ns | PC=05 | Instr=10 | A=00 | B=00 | ALU=00 | Zero=1 | EQ=1
+# t=290ns | PC=06 | Instr=26 | A=00 | B=00 | ALU=00 | Zero=1 | EQ=1
+# t=310ns | PC=07 | Instr=57 | A=00 | B=00 | ALU=00 | Zero=1 | EQ=1
+# t=330ns | PC=08 | Instr=75 | A=00 | B=00 | ALU=00 | Zero=1 | EQ=1
+# t=350ns | PC=05 | Instr=10 | A=00 | B=00 | ALU=00 | Zero=1 | EQ=1
+# t=370ns | PC=06 | Instr=26 | A=00 | B=00 | ALU=00 | Zero=1 | EQ=1
+# t=390ns | PC=07 | Instr=57 | A=00 | B=00 | ALU=00 | Zero=1 | EQ=1
+# t=410ns | PC=08 | Instr=75 | A=00 | B=00 | ALU=00 | Zero=1 | EQ=1
+# t=430ns | PC=05 | Instr=10 | A=00 | B=00 | ALU=00 | Zero=1 | EQ=1
+# t=450ns | PC=06 | Instr=26 | A=00 | B=00 | ALU=00 | Zero=1 | EQ=1
+# t=470ns | PC=07 | Instr=57 | A=00 | B=00 | ALU=00 | Zero=1 | EQ=1
+# t=490ns | PC=08 | Instr=75 | A=00 | B=00 | ALU=00 | Zero=1 | EQ=1
+# t=510ns | PC=05 | Instr=10 | A=00 | B=00 | ALU=00 | Zero=1 | EQ=1
+# t=530ns | PC=06 | Instr=26 | A=00 | B=00 | ALU=00 | Zero=1 | EQ=1
+# t=550ns | PC=07 | Instr=57 | A=00 | B=00 | ALU=00 | Zero=1 | EQ=1
+# t=570ns | PC=08 | Instr=75 | A=00 | B=00 | ALU=00 | Zero=1 | EQ=1
+# t=590ns | PC=05 | Instr=10 | A=00 | B=00 | ALU=00 | Zero=1 | EQ=1
+# t=610ns | PC=06 | Instr=26 | A=00 | B=00 | ALU=00 | Zero=1 | EQ=1
+# t=630ns | PC=07 | Instr=57 | A=00 | B=00 | ALU=00 | Zero=1 | EQ=1
+# t=650ns | PC=08 | Instr=75 | A=00 | B=00 | ALU=00 | Zero=1 | EQ=1
+# t=670ns | PC=05 | Instr=10 | A=00 | B=00 | ALU=00 | Zero=1 | EQ=1
+# t=690ns | PC=06 | Instr=26 | A=00 | B=00 | ALU=00 | Zero=1 | EQ=1
+# t=710ns | PC=07 | Instr=57 | A=00 | B=00 | ALU=00 | Zero=1 | EQ=1
+# t=730ns | PC=08 | Instr=75 | A=00 | B=00 | ALU=00 | Zero=1 | EQ=1
+# t=750ns | PC=05 | Instr=10 | A=00 | B=00 | ALU=00 | Zero=1 | EQ=1
+# t=770ns | PC=06 | Instr=26 | A=00 | B=00 | ALU=00 | Zero=1 | EQ=1
+# t=790ns | PC=07 | Instr=57 | A=00 | B=00 | ALU=00 | Zero=1 | EQ=1
+# t=810ns | PC=08 | Instr=75 | A=00 | B=00 | ALU=00 | Zero=1 | EQ=1
+# t=830ns | PC=05 | Instr=10 | A=00 | B=00 | ALU=00 | Zero=1 | EQ=1
+# t=850ns | PC=06 | Instr=26 | A=00 | B=00 | ALU=00 | Zero=1 | EQ=1
+# t=870ns | PC=07 | Instr=57 | A=00 | B=00 | ALU=00 | Zero=1 | EQ=1
+# t=890ns | PC=08 | Instr=75 | A=00 | B=00 | ALU=00 | Zero=1 | EQ=1
+# t=910ns | PC=05 | Instr=10 | A=00 | B=00 | ALU=00 | Zero=1 | EQ=1
+# t=930ns | PC=06 | Instr=26 | A=00 | B=00 | ALU=00 | Zero=1 | EQ=1
+# t=950ns | PC=07 | Instr=57 | A=00 | B=00 | ALU=00 | Zero=1 | EQ=1
+# t=970ns | PC=08 | Instr=75 | A=00 | B=00 | ALU=00 | Zero=1 | EQ=1
+# t=990ns | PC=05 | Instr=10 | A=00 | B=00 | ALU=00 | Zero=1 | EQ=1
+# t=1010ns | PC=06 | Instr=26 | A=00 | B=00 | ALU=00 | Zero=1 | EQ=1
+# t=1030ns | PC=07 | Instr=57 | A=00 | B=00 | ALU=00 | Zero=1 | EQ=1
+# t=1050ns | PC=08 | Instr=75 | A=00 | B=00 | ALU=00 | Zero=1 | EQ=1
+# t=1070ns | PC=05 | Instr=10 | A=00 | B=00 | ALU=00 | Zero=1 | EQ=1
+# t=1090ns | PC=06 | Instr=26 | A=00 | B=00 | ALU=00 | Zero=1 | EQ=1
+# t=1110ns | PC=07 | Instr=57 | A=00 | B=00 | ALU=00 | Zero=1 | EQ=1
+# t=1130ns | PC=08 | Instr=75 | A=00 | B=00 | ALU=00 | Zero=1 | EQ=1
+# t=1150ns | PC=05 | Instr=10 | A=00 | B=00 | ALU=00 | Zero=1 | EQ=1
+# t=1170ns | PC=06 | Instr=26 | A=00 | B=00 | ALU=00 | Zero=1 | EQ=1
+# t=1190ns | PC=07 | Instr=57 | A=00 | B=00 | ALU=00 | Zero=1 | EQ=1
+# t=1210ns | PC=08 | Instr=75 | A=00 | B=00 | ALU=00 | Zero=1 | EQ=1
+# t=1230ns | PC=05 | Instr=10 | A=00 | B=00 | ALU=00 | Zero=1 | EQ=1
+# t=1250ns | PC=06 | Instr=26 | A=00 | B=00 | ALU=00 | Zero=1 | EQ=1
+# t=1270ns | PC=07 | Instr=57 | A=00 | B=00 | ALU=00 | Zero=1 | EQ=1
+# t=1290ns | PC=08 | Instr=75 | A=00 | B=00 | ALU=00 | Zero=1 | EQ=1
+# t=1310ns | PC=05 | Instr=10 | A=00 | B=00 | ALU=00 | Zero=1 | EQ=1
+# t=1330ns | PC=06 | Instr=26 | A=00 | B=00 | ALU=00 | Zero=1 | EQ=1
+# t=1350ns | PC=07 | Instr=57 | A=00 | B=00 | ALU=00 | Zero=1 | EQ=1
+# t=1370ns | PC=08 | Instr=75 | A=00 | B=00 | ALU=00 | Zero=1 | EQ=1
+# t=1390ns | PC=05 | Instr=10 | A=00 | B=00 | ALU=00 | Zero=1 | EQ=1
+# t=1410ns | PC=06 | Instr=26 | A=00 | B=00 | ALU=00 | Zero=1 | EQ=1
+# t=1430ns | PC=07 | Instr=57 | A=00 | B=00 | ALU=00 | Zero=1 | EQ=1
+# t=1450ns | PC=08 | Instr=75 | A=00 | B=00 | ALU=00 | Zero=1 | EQ=1
+# t=1470ns | PC=05 | Instr=10 | A=00 | B=00 | ALU=00 | Zero=1 | EQ=1
+# t=1490ns | PC=06 | Instr=26 | A=00 | B=00 | ALU=00 | Zero=1 | EQ=1
+# t=1510ns | PC=07 | Instr=57 | A=00 | B=00 | ALU=00 | Zero=1 | EQ=1
+# t=1530ns | PC=08 | Instr=75 | A=00 | B=00 | ALU=00 | Zero=1 | EQ=1
+# t=1550ns | PC=05 | Instr=10 | A=00 | B=00 | ALU=00 | Zero=1 | EQ=1
+# t=1570ns | PC=06 | Instr=26 | A=00 | B=00 | ALU=00 | Zero=1 | EQ=1
+# t=1590ns | PC=07 | Instr=57 | A=00 | B=00 | ALU=00 | Zero=1 | EQ=1
+# t=1610ns | PC=08 | Instr=75 | A=00 | B=00 | ALU=00 | Zero=1 | EQ=1
+# t=1630ns | PC=05 | Instr=10 | A=00 | B=00 | ALU=00 | Zero=1 | EQ=1
+# t=1650ns | PC=06 | Instr=26 | A=00 | B=00 | ALU=00 | Zero=1 | EQ=1
+# t=1670ns | PC=07 | Instr=57 | A=00 | B=00 | ALU=00 | Zero=1 | EQ=1
+# t=1690ns | PC=08 | Instr=75 | A=00 | B=00 | ALU=00 | Zero=1 | EQ=1
+# t=1710ns | PC=05 | Instr=10 | A=00 | B=00 | ALU=00 | Zero=1 | EQ=1
+# t=1730ns | PC=06 | Instr=26 | A=00 | B=00 | ALU=00 | Zero=1 | EQ=1
+# t=1750ns | PC=07 | Instr=57 | A=00 | B=00 | ALU=00 | Zero=1 | EQ=1
+# t=1770ns | PC=08 | Instr=75 | A=00 | B=00 | ALU=00 | Zero=1 | EQ=1
+# t=1790ns | PC=05 | Instr=10 | A=00 | B=00 | ALU=00 | Zero=1 | EQ=1
+# t=1810ns | PC=06 | Instr=26 | A=00 | B=00 | ALU=00 | Zero=1 | EQ=1
+# t=1830ns | PC=07 | Instr=57 | A=00 | B=00 | ALU=00 | Zero=1 | EQ=1
+# t=1850ns | PC=08 | Instr=75 | A=00 | B=00 | ALU=00 | Zero=1 | EQ=1
+# t=1870ns | PC=05 | Instr=10 | A=00 | B=00 | ALU=00 | Zero=1 | EQ=1
+# t=1890ns | PC=06 | Instr=26 | A=00 | B=00 | ALU=00 | Zero=1 | EQ=1
+# t=1910ns | PC=07 | Instr=57 | A=00 | B=00 | ALU=00 | Zero=1 | EQ=1
+# t=1930ns | PC=08 | Instr=75 | A=00 | B=00 | ALU=00 | Zero=1 | EQ=1
+# t=1950ns | PC=05 | Instr=10 | A=00 | B=00 | ALU=00 | Zero=1 | EQ=1
+# t=1970ns | PC=06 | Instr=26 | A=00 | B=00 | ALU=00 | Zero=1 | EQ=1
+# t=1990ns | PC=07 | Instr=57 | A=00 | B=00 | ALU=00 | Zero=1 | EQ=1
+# t=2010ns | PC=08 | Instr=75 | A=00 | B=00 | ALU=00 | Zero=1 | EQ=1
+# t=2030ns | PC=05 | Instr=10 | A=00 | B=00 | ALU=00 | Zero=1 | EQ=1
+# t=2050ns | PC=06 | Instr=26 | A=00 | B=00 | ALU=00 | Zero=1 | EQ=1
+# t=2070ns | PC=07 | Instr=57 | A=00 | B=00 | ALU=00 | Zero=1 | EQ=1
+# t=2090ns | PC=08 | Instr=75 | A=00 | B=00 | ALU=00 | Zero=1 | EQ=1
+# t=2110ns | PC=05 | Instr=10 | A=00 | B=00 | ALU=00 | Zero=1 | EQ=1
+# t=2130ns | PC=06 | Instr=26 | A=00 | B=00 | ALU=00 | Zero=1 | EQ=1
+# t=2150ns | PC=07 | Instr=57 | A=00 | B=00 | ALU=00 | Zero=1 | EQ=1
+# t=2170ns | PC=08 | Instr=75 | A=00 | B=00 | ALU=00 | Zero=1 | EQ=1
+# t=2190ns | PC=05 | Instr=10 | A=00 | B=00 | ALU=00 | Zero=1 | EQ=1
+# t=2210ns | PC=06 | Instr=26 | A=00 | B=00 | ALU=00 | Zero=1 | EQ=1
+# t=2230ns | PC=07 | Instr=57 | A=00 | B=00 | ALU=00 | Zero=1 | EQ=1
+# t=2250ns | PC=08 | Instr=75 | A=00 | B=00 | ALU=00 | Zero=1 | EQ=1
+# t=2270ns | PC=05 | Instr=10 | A=00 | B=00 | ALU=00 | Zero=1 | EQ=1
+# t=2290ns | PC=06 | Instr=26 | A=00 | B=00 | ALU=00 | Zero=1 | EQ=1
+# t=2310ns | PC=07 | Instr=57 | A=00 | B=00 | ALU=00 | Zero=1 | EQ=1
+# t=2330ns | PC=08 | Instr=75 | A=00 | B=00 | ALU=00 | Zero=1 | EQ=1
+# t=2350ns | PC=05 | Instr=10 | A=00 | B=00 | ALU=00 | Zero=1 | EQ=1
+# t=2370ns | PC=06 | Instr=26 | A=00 | B=00 | ALU=00 | Zero=1 | EQ=1
+# t=2390ns | PC=07 | Instr=57 | A=00 | B=00 | ALU=00 | Zero=1 | EQ=1
+# t=2410ns | PC=08 | Instr=75 | A=00 | B=00 | ALU=00 | Zero=1 | EQ=1
+# t=2430ns | PC=05 | Instr=10 | A=00 | B=00 | ALU=00 | Zero=1 | EQ=1
+# t=2450ns | PC=06 | Instr=26 | A=00 | B=00 | ALU=00 | Zero=1 | EQ=1
+# t=2470ns | PC=07 | Instr=57 | A=00 | B=00 | ALU=00 | Zero=1 | EQ=1
+# t=2490ns | PC=08 | Instr=75 | A=00 | B=00 | ALU=00 | Zero=1 | EQ=1
+# t=2510ns | PC=05 | Instr=10 | A=00 | B=00 | ALU=00 | Zero=1 | EQ=1
+# t=2530ns | PC=06 | Instr=26 | A=00 | B=00 | ALU=00 | Zero=1 | EQ=1
+# t=2550ns | PC=07 | Instr=57 | A=00 | B=00 | ALU=00 | Zero=1 | EQ=1
+# t=2570ns | PC=08 | Instr=75 | A=00 | B=00 | ALU=00 | Zero=1 | EQ=1
+# t=2590ns | PC=05 | Instr=10 | A=00 | B=00 | ALU=00 | Zero=1 | EQ=1
+# t=2610ns | PC=06 | Instr=26 | A=00 | B=00 | ALU=00 | Zero=1 | EQ=1
+# t=2630ns | PC=07 | Instr=57 | A=00 | B=00 | ALU=00 | Zero=1 | EQ=1
+# t=2650ns | PC=08 | Instr=75 | A=00 | B=00 | ALU=00 | Zero=1 | EQ=1
+# t=2670ns | PC=05 | Instr=10 | A=00 | B=00 | ALU=00 | Zero=1 | EQ=1
+# t=2690ns | PC=06 | Instr=26 | A=00 | B=00 | ALU=00 | Zero=1 | EQ=1
+# t=2710ns | PC=07 | Instr=57 | A=00 | B=00 | ALU=00 | Zero=1 | EQ=1
+# t=2730ns | PC=08 | Instr=75 | A=00 | B=00 | ALU=00 | Zero=1 | EQ=1
+# t=2750ns | PC=05 | Instr=10 | A=00 | B=00 | ALU=00 | Zero=1 | EQ=1
+# t=2770ns | PC=06 | Instr=26 | A=00 | B=00 | ALU=00 | Zero=1 | EQ=1
+# t=2790ns | PC=07 | Instr=57 | A=00 | B=00 | ALU=00 | Zero=1 | EQ=1
+# t=2810ns | PC=08 | Instr=75 | A=00 | B=00 | ALU=00 | Zero=1 | EQ=1
+# t=2830ns | PC=05 | Instr=10 | A=00 | B=00 | ALU=00 | Zero=1 | EQ=1
+# t=2850ns | PC=06 | Instr=26 | A=00 | B=00 | ALU=00 | Zero=1 | EQ=1
+# t=2870ns | PC=07 | Instr=57 | A=00 | B=00 | ALU=00 | Zero=1 | EQ=1
+# t=2890ns | PC=08 | Instr=75 | A=00 | B=00 | ALU=00 | Zero=1 | EQ=1
+# t=2910ns | PC=05 | Instr=10 | A=00 | B=00 | ALU=00 | Zero=1 | EQ=1
+# t=2930ns | PC=06 | Instr=26 | A=00 | B=00 | ALU=00 | Zero=1 | EQ=1
+# t=2950ns | PC=07 | Instr=57 | A=00 | B=00 | ALU=00 | Zero=1 | EQ=1
+# t=2970ns | PC=08 | Instr=75 | A=00 | B=00 | ALU=00 | Zero=1 | EQ=1
+# t=2990ns | PC=05 | Instr=10 | A=00 | B=00 | ALU=00 | Zero=1 | EQ=1
+# === Fim da Simulação ===
+# ** Note: $stop    : /home/aug/Documents/projeto_final_cepedi/testbench.v(56)
+#    Time: 3 ns  Iteration: 0  Instance: /testbench
+# Break in Module testbench at /home/aug/Documents/projeto_final_cepedi/testbench.v line 56
+# End time: 21:34:23 on Nov 25,2025, Elapsed time: 0:02:11
+# Errors: 0, Warnings: 10

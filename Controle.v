@@ -5,7 +5,6 @@ module Controle(
 	output reg LoadB,
 	output reg MemRead,
 	output reg MemWrite,
-	output reg WriteBackMem,
 	output reg BranchZero,
 	output reg BranchEQ,
 	output reg UseImmediate
@@ -18,7 +17,6 @@ module Controle(
 		 LoadB = 0;
 		 MemRead = 0;
 		 MemWrite = 0;
-		 WriteBackMem = 0;
 		 BranchZero = 0;
 		 BranchEQ   = 0;
 		 UseImmediate = 0;
@@ -28,12 +26,12 @@ module Controle(
 			
 			4'b0000: begin // ADD #X 
 				ALUOp = 3'b000;
-				WriteBackMem = 1;
+				LoadA = 1;
 			end
 			
 			4'b0001: begin // SUB #X
 				ALUOp = 3'b001;
-				WriteBackMem = 1;
+				LoadA = 1;
 			end
 			
 			4'b0010: begin // LDA #X
@@ -66,12 +64,12 @@ module Controle(
 		  
 		  4'b1000: begin // AND
             ALUOp = 3'b010;
-            WriteBackMem = 1;
+				LoadA = 1;
         end
 			
 			4'b1001: begin // OR
             ALUOp = 3'b011;
-            WriteBackMem = 1;
+            LoadA = 1;
         end
 		  
 		  4'b1010: begin // BEQ

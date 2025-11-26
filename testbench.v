@@ -1,31 +1,59 @@
+//`timescale 1ns/1ps
+
 module testbench;
 
-reg clk, reset;
+    reg clk;
+    reg reset;
 
-cpu_top cpu (
-    .clk(clk),
-    .reset(reset)
-);
-    
-initial begin
-    clk = 1'b0;
-end 
+    // Instancia a CPU
+    cpu_top DUT (
+        .clk(clk),
+        .reset(reset)
+    );
 
-always #100 clk = ~clk; // Período = 20 us
-    
-initial begin 
-    $dumpfile("teste.vcd");
-    $dumpvars(0, testbench);
+    //============================
+    //  Clock
+    //============================
+    initial begin
+        clk = 0;
+        forever #10 clk = ~clk;   // clock de 10ns (100 MHz)
+    end
 
-    // reset ativo por 3 ciclos de clock
-    reset = 1'b1;
-    #600;    
-    reset = 1'b0;
+    //============================
+    //  Reset
+    //============================
+    initial begin
+        reset = 1;
+        #20;
+        reset = 0;
+    end
 
-    // roda simulação por tempo suficiente
-    #500000;  
+    //============================
+    //  Monitoramento
+    //============================
+    initial begin
+        $display("=== Iniciando Simulação ===");
 
-    $finish;
-end
+        $monitor(
+            "t=%0dns | PC=%02h | Instr=%02h | A=%02h | B=%02h | ALU=%02h | Zero=%b | EQ=%b",
+            $time,
+            DUT.PC_out,
+            DUT.instrucao,
+            DUT.regA,
+            DUT.regB,
+            DUT.alu_result,
+            DUT.alu_zero,
+            DUT.alu_eq
+        );
+    end
+
+    //============================
+    //  Tempo de simulação
+    //============================
+    initial begin
+        #3000;      // roda 300ns
+        $display("=== Fim da Simulação ===");
+        $stop;
+    end
 
 endmodule
