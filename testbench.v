@@ -1,5 +1,3 @@
-//`timescale 1ns/1ps
-
 module testbench;
 
     reg clk;
@@ -16,7 +14,7 @@ module testbench;
     //============================
     initial begin
         clk = 0;
-        forever #10 clk = ~clk;   // clock de 10ns (100 MHz)
+        forever #10 clk = ~clk;   // clock de 10 unidades de tempo 
     end
 
     //============================
@@ -35,7 +33,7 @@ module testbench;
         $display("=== Iniciando Simulação ===");
 
         $monitor(
-            "t=%0dns | PC=%02h | Instr=%02h | A=%02h | B=%02h | ALU=%02h |	Zero=%b | EQ=%b | write_reg_data=%b | ram_write_data=%b | ram_data_out=%b",
+            "t=%0dns | PC=%02h | Instr=%02h | A=%02h | B=%02h | ALU=%02h |	Zero=%b | EQ=%b | write_reg_data=%b | ram_write_data=%b | ram_data_out=%b | MemRead=%b | MemWrite=%b | write_enable=%b",
             $time,
             DUT.PC_out,
             DUT.instrucao,
@@ -46,7 +44,10 @@ module testbench;
             DUT.alu_eq,
 				DUT.write_reg_data,
 				DUT.ram_write_data,
-				DUT.ram_data_out
+				DUT.ram_data_out,
+				DUT.MemRead,
+				DUT.MemWrite,
+				DUT.write_enable
         );
     end
 
@@ -54,7 +55,7 @@ module testbench;
     //  Tempo de simulação
     //============================
     initial begin
-        #3000;      // roda 300ns
+        #500;      // roda 3000 unidaddes de tempo
         $display("=== Fim da Simulação ===");
         $stop;
     end
